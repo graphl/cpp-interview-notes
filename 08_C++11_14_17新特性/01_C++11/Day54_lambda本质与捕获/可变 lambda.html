@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>可变 lambda</title>
+</head>
+<body><h2 id='可变-lambda'>可变 lambda</h2>
+<pre><code>int a = 10;
+auto f = [a]() mutable { return ++a; };
+</code></pre>
+<p>展开成：</p>
+<pre><code>struct __Lambda_4 {
+    int a;
+    int operator()() {  // 注意不再是 const
+        return ++a;
+    }
+};
+auto f = __Lambda_4{a};
+</code></pre>
+<p>👉 <code>mutable</code> 让 <code>operator()</code> 去掉了 <code>const</code>，可以修改捕获的拷贝。</p>
+<p>&nbsp;</p>
+</body>
+</html>
