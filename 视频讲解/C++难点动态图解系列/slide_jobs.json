@@ -1,0 +1,1507 @@
+{
+  "run_status": "slides_dispatched",
+  "deck_name": "C++难点动态图解系列",
+  "selected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "自决策通过的内存块分割与合并样片提示词",
+    "size": "16:9 landscape, built-in generated 1672x941",
+    "quality": "built-in default high quality",
+    "approved_sample_path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+    "input_context_preparation": "parent inspected approved sample with view_image; workers use it as style-only reference",
+    "handoff_rule": "Subagents must use this same built-in image tool in generate mode; return a blocker if unavailable."
+  },
+  "max_concurrent_slides": 3,
+  "slides": [
+    {
+      "slide_id": "slide_01",
+      "number": 1,
+      "title": "封面——“申请内存”其实有三层",
+      "job": "prompts/slide_01.json",
+      "out": "origin_image/slide_01.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_01",
+        "agent_nickname": "slide_01",
+        "prompt": "prompts/slide_01.json",
+        "prompt_sha256": "7689cea6242df05cfc7001389c9f6f2fb175bbd408459158f338af2165620cda",
+        "dispatched_at": "2026-07-17T16:12:11Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_01",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f70d7-aa9b-78a3-9af1-13e2decb7cd3\\exec-9d500ef8-5ca8-42fb-9471-c25a78d6df47.png",
+        "selected_source_sha256": "b378f6ba2aafd55213dcc08803ee931e3268099f34f7a4f35d1b6ed60cb988c2",
+        "final_image": "origin_image/slide_01.png",
+        "final_image_sha256": "b378f6ba2aafd55213dcc08803ee931e3268099f34f7a4f35d1b6ed60cb988c2",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "中文清晰，三层隐喻准确，留白和手绘风格一致。",
+        "recorded_at": "2026-07-17T16:17:41Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_02",
+      "number": 2,
+      "title": "三层模型",
+      "job": "prompts/slide_02.json",
+      "out": "origin_image/slide_02.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_02",
+        "agent_nickname": "slide_02",
+        "prompt": "prompts/slide_02.json",
+        "prompt_sha256": "b9865f14a7b86e532a7d7cd5de85cbf170730af93bbbc1f7a61cd22073e77b92",
+        "dispatched_at": "2026-07-17T16:12:12Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_02",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f70d7-eeae-7192-99ea-ae9bb140ae8d\\exec-e928e99f-b3fe-4dc6-866c-5ddf2ccad965.png",
+        "selected_source_sha256": "e093737349fe811082fe1f1ca2014626e391ce58fefde87e90e753455ed4e4ac",
+        "final_image": "origin_image/slide_02.png",
+        "final_image_sha256": "e093737349fe811082fe1f1ca2014626e391ce58fefde87e90e753455ed4e4ac",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "三层关系和术语准确，版式清晰。",
+        "recorded_at": "2026-07-17T16:17:42Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_03",
+      "number": 3,
+      "title": "简化 malloc 的块头和空闲链表",
+      "job": "prompts/slide_03.json",
+      "out": "origin_image/slide_03.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_03",
+        "agent_nickname": "slide_03",
+        "prompt": "prompts/slide_03.json",
+        "prompt_sha256": "a10e203e61215c5ee380a269c1575559da41d093617d3bc6a4e55ed9ae93c16c",
+        "dispatched_at": "2026-07-17T16:12:12Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_03",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f70d8-3e5e-77d3-a1eb-5c1341c509d9\\exec-70b6f454-8485-4a3e-9eb8-8b46d81c2478.png",
+        "selected_source_sha256": "0457890b0210fc4d01caada35a9c60215c8cbda21ff1d52f14f4a299f4525d4a",
+        "final_image": "origin_image/slide_03.png",
+        "final_image_sha256": "0457890b0210fc4d01caada35a9c60215c8cbda21ff1d52f14f4a299f4525d4a",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "块头、payload、对齐和 first-fit 路径准确可读。",
+        "recorded_at": "2026-07-17T16:17:42Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_04",
+      "number": 4,
+      "title": "分割与合并为什么能减少浪费",
+      "job": "prompts/slide_04.json",
+      "out": "origin_image/slide_04.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "accepted",
+      "dispatch": null,
+      "result": {
+        "final_image": "origin_image/slide_04.png",
+        "accepted_sample": true
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_05",
+      "number": 5,
+      "title": "new/delete 的四步时间线",
+      "job": "prompts/slide_05.json",
+      "out": "origin_image/slide_05.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_05",
+        "agent_nickname": "slide_05",
+        "prompt": "prompts/slide_05.json",
+        "prompt_sha256": "03c77a17e41dfec4af89da3f88241271b68863fc9849b11191efc9594568c1f1",
+        "dispatched_at": "2026-07-17T16:21:13Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_05",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f70df-2bc1-7523-ba20-723575d4ef81\\exec-43364cef-c455-4fa0-93aa-3561033be314.png",
+        "selected_source_sha256": "cdb5347c3fe20f4cd39a624d63e93af8628780ba4a7c0d268cf62eadd2c54cb3",
+        "final_image": "origin_image/slide_05.png",
+        "final_image_sha256": "cdb5347c3fe20f4cd39a624d63e93af8628780ba4a7c0d268cf62eadd2c54cb3",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "new/delete 四步时间线正确，构造与析构、分配与释放边界清楚",
+        "recorded_at": "2026-07-19T04:29:08Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_06",
+      "number": 6,
+      "title": "placement new 和 allocator",
+      "job": "prompts/slide_06.json",
+      "out": "origin_image/slide_06.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_06",
+        "agent_nickname": "slide_06",
+        "prompt": "prompts/slide_06.json",
+        "prompt_sha256": "5d2a905f2960fb6cc4a6113405e03ebb40c231dd7c9221d8df5f5b70c738076a",
+        "dispatched_at": "2026-07-17T16:21:13Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_06",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f70e0-04f0-7503-97c7-eaf50efea8b4\\exec-bdb9fae4-77d6-45d0-8f32-e37477b5ac0a.png",
+        "selected_source_sha256": "7cc3050657f01c422a41f9347464936c529065bc06edcff16c87754cb069bd8e",
+        "final_image": "origin_image/slide_06.png",
+        "final_image_sha256": "7cc3050657f01c422a41f9347464936c529065bc06edcff16c87754cb069bd8e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "placement new 与 allocator 分阶段表达准确",
+        "recorded_at": "2026-07-19T04:29:10Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_07",
+      "number": 7,
+      "title": "vector 扩容与异常回滚",
+      "job": "prompts/slide_07.json",
+      "out": "origin_image/slide_07.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_07",
+        "agent_nickname": "slide_07",
+        "prompt": "prompts/slide_07.json",
+        "prompt_sha256": "c29f5771d29b06bc8d10fae3adbf18c188254408fd254af538403603b3528d3d",
+        "dispatched_at": "2026-07-17T16:21:14Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_07",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f70e1-37c9-7843-929a-b97e92376043\\exec-53d185f7-9011-4ba3-9223-8d12b9afd216.png",
+        "selected_source_sha256": "a8430a0413fc2d96ccef7c5ac4f83bcb3f0a219a887ba8f46d2c09911315672e",
+        "final_image": "origin_image/slide_07.png",
+        "final_image_sha256": "a8430a0413fc2d96ccef7c5ac4f83bcb3f0a219a887ba8f46d2c09911315672e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "vector 扩容搬迁与异常回滚路径准确",
+        "recorded_at": "2026-07-19T04:29:11Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_08",
+      "number": 8,
+      "title": "封面——同一个 Base 指针为什么调用不同函数",
+      "job": "prompts/slide_08.json",
+      "out": "origin_image/slide_08.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_08",
+        "agent_nickname": "slide_08",
+        "prompt": "prompts/slide_08.json",
+        "prompt_sha256": "c83a2ea7caf7ffdfc0a6d77c6ef53481386a3069f909391935443c375cfe7e14",
+        "dispatched_at": "2026-07-19T04:30:47Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_08",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78a2-ddc7-73f3-b2a7-ffdd92d5b0b4\\exec-ce7fcbfb-72b8-4cbf-a9f3-763c6e1f1254.png",
+        "selected_source_sha256": "b8b68af2b4474f813a6f83dba8165caea2bf1ca96a0c3666fcbc05ad91374113",
+        "final_image": "origin_image/slide_08.png",
+        "final_image_sha256": "b8b68af2b4474f813a6f83dba8165caea2bf1ca96a0c3666fcbc05ad91374113",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "动态分派路径与两种动态对象表达准确",
+        "recorded_at": "2026-07-19T04:40:10Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_09",
+      "number": 9,
+      "title": "普通调用与虚调用对比",
+      "job": "prompts/slide_09.json",
+      "out": "origin_image/slide_09.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_09",
+        "agent_nickname": "slide_09",
+        "prompt": "prompts/slide_09.json",
+        "prompt_sha256": "61bd6779ff69a23163b950918e3dc06660c4b1d2b5937014ea18de16c5710cf6",
+        "dispatched_at": "2026-07-19T04:30:48Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_09",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78a3-1bd4-7ee2-9972-71964655dd23\\exec-b2525dc1-2f8a-4f0c-8159-85f865d755f8.png",
+        "selected_source_sha256": "74e11f4f09cc0f71c7973b3c6c678e1b2bd10103a75bc4537b8cb8890043177a",
+        "final_image": "origin_image/slide_09.png",
+        "final_image_sha256": "74e11f4f09cc0f71c7973b3c6c678e1b2bd10103a75bc4537b8cb8890043177a",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "普通调用和虚调用对比清晰准确",
+        "recorded_at": "2026-07-19T04:40:11Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_10",
+      "number": 10,
+      "title": "对象、vptr 和 vtable 的常见实现模型",
+      "job": "prompts/slide_10.json",
+      "out": "origin_image/slide_10.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_10",
+        "agent_nickname": "slide_10",
+        "prompt": "prompts/slide_10.json",
+        "prompt_sha256": "f6b2b7774119b481cfd33efb60bc55ce04cd4bd753bc0ffb72e4852af17c1502",
+        "dispatched_at": "2026-07-19T04:30:48Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_10",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78a3-47bb-7230-91d1-2fc64315758a\\exec-27f10f6e-b505-4db0-965b-f8ef490eef79.png",
+        "selected_source_sha256": "5a4cf192d6df550ea778c3fbf49140ce171661b80eac5495e90f701ac32d9362",
+        "final_image": "origin_image/slide_10.png",
+        "final_image_sha256": "5a4cf192d6df550ea778c3fbf49140ce171661b80eac5495e90f701ac32d9362",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "对象 vptr 与类型相关 vtable 模型准确并提示 ABI 差异",
+        "recorded_at": "2026-07-19T04:40:12Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_11",
+      "number": 11,
+      "title": "虚调用数据流",
+      "job": "prompts/slide_11.json",
+      "out": "origin_image/slide_11.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_11",
+        "agent_nickname": "slide_11",
+        "prompt": "prompts/slide_11.json",
+        "prompt_sha256": "fee8bdd02517f7e60841aee3a9b5d4481e6412b979ec08294ad02fc2209c578e",
+        "dispatched_at": "2026-07-19T04:41:41Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_11",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78ac-da00-75a2-91dd-43b627d8498b\\exec-41c1c236-4122-4cba-b92d-328a7594e793.png",
+        "selected_source_sha256": "255a89b73e293e0517ff52459cb2f0280573038356d2690b2f79f1e9d05f889a",
+        "final_image": "origin_image/slide_11.png",
+        "final_image_sha256": "255a89b73e293e0517ff52459cb2f0280573038356d2690b2f79f1e9d05f889a",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "虚调用数据流准确",
+        "recorded_at": "2026-07-19T04:47:00Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_12",
+      "number": 12,
+      "title": "构造和析构期间为什么“不再多态”",
+      "job": "prompts/slide_12.json",
+      "out": "origin_image/slide_12.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_12",
+        "agent_nickname": "slide_12",
+        "prompt": "prompts/slide_12.json",
+        "prompt_sha256": "02479ce471ff80149557358093209153596b9c0403e8ac0c4c65c5bbe77b8abb",
+        "dispatched_at": "2026-07-19T04:41:41Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_12",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78ad-47f4-7b71-a16b-9b24288ecc54\\exec-e3855d76-183f-46bb-a916-3b5b7b811901.png",
+        "selected_source_sha256": "e2c7d37244bf09168ff60255d9cfb0893d3d6ec332cc02330dc4a9750038c71e",
+        "final_image": "origin_image/slide_12.png",
+        "final_image_sha256": "e2c7d37244bf09168ff60255d9cfb0893d3d6ec332cc02330dc4a9750038c71e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "构造析构期间分派语义准确",
+        "recorded_at": "2026-07-19T04:47:01Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_13",
+      "number": 13,
+      "title": "多继承与 this 指针调整",
+      "job": "prompts/slide_13.json",
+      "out": "origin_image/slide_13.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_13",
+        "agent_nickname": "slide_13",
+        "prompt": "prompts/slide_13.json",
+        "prompt_sha256": "3275222753ad53e9727d6c37dbc40b3d068f5769fd85445ac69962a04dec55d6",
+        "dispatched_at": "2026-07-19T04:41:42Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_13",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78ad-b24d-78e2-a1fa-dee51839c2aa\\exec-e9d218d4-cb4a-4f79-a068-08de5bede019.png",
+        "selected_source_sha256": "984a093591c6e0875fa57f602470670da18faa569c7f1d85cdebf8d826de0246",
+        "final_image": "origin_image/slide_13.png",
+        "final_image_sha256": "984a093591c6e0875fa57f602470670da18faa569c7f1d85cdebf8d826de0246",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "多继承子对象布局和 this 调整准确",
+        "recorded_at": "2026-07-19T04:47:01Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_14",
+      "number": 14,
+      "title": "虚继承如何共享虚基类",
+      "job": "prompts/slide_14.json",
+      "out": "origin_image/slide_14.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_14",
+        "agent_nickname": "slide_14",
+        "prompt": "prompts/slide_14.json",
+        "prompt_sha256": "b082402fb6232aafbc8cee5ddc943e2f8fc6231ff52eb35af4e72c5693f301f1",
+        "dispatched_at": "2026-07-19T04:48:09Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_14",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78b3-1bde-70e2-80f3-b3097da753b8\\exec-cd4e0c0a-5ea8-4943-b0a2-46936e15b86f.png",
+        "selected_source_sha256": "c6eac4cd9eb7fdff567cbd61f62281e098a7de7981024f95235724aaa456b3ea",
+        "final_image": "origin_image/slide_14.png",
+        "final_image_sha256": "c6eac4cd9eb7fdff567cbd61f62281e098a7de7981024f95235724aaa456b3ea",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "虚继承共享虚基类图准确",
+        "recorded_at": "2026-07-19T04:54:36Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_15",
+      "number": 15,
+      "title": "RTTI 与 dynamic_cast",
+      "job": "prompts/slide_15.json",
+      "out": "origin_image/slide_15.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_15",
+        "agent_nickname": "slide_15",
+        "prompt": "prompts/slide_15.json",
+        "prompt_sha256": "c738944b060c77c9db6e7cf452bf4e6cda0e711afcebc8b56f14a740d02b8240",
+        "dispatched_at": "2026-07-19T04:48:10Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_15",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78b3-5e97-7ee2-a718-b1f437b93b8f\\exec-37b546d0-6fab-4c73-9126-54629f5f42d3.png",
+        "selected_source_sha256": "a4be42ccec13258d91fc36093881792fdc40d781f4052400bc1e95852727061e",
+        "final_image": "origin_image/slide_15.png",
+        "final_image_sha256": "a4be42ccec13258d91fc36093881792fdc40d781f4052400bc1e95852727061e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "RTTI dynamic_cast 成败语义准确",
+        "recorded_at": "2026-07-19T04:54:37Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_16",
+      "number": 16,
+      "title": "封面——“通知了”为什么线程仍可能出错",
+      "job": "prompts/slide_16.json",
+      "out": "origin_image/slide_16.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_16",
+        "agent_nickname": "slide_16",
+        "prompt": "prompts/slide_16.json",
+        "prompt_sha256": "eade4683fb6039d1b8c9950f93cce240b6edf429667a57121d65710bb42f6a6a",
+        "dispatched_at": "2026-07-19T04:48:10Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_16",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78b3-b9ce-77b2-931d-ab620d520450\\exec-9e278fff-bcee-4def-99eb-ec49060186ee.png",
+        "selected_source_sha256": "482726f6bb47d1926c337af318cfd19ac89f036b767c8ae3feb5667faff300de",
+        "final_image": "origin_image/slide_16.png",
+        "final_image_sha256": "482726f6bb47d1926c337af318cfd19ac89f036b767c8ae3feb5667faff300de",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "通知不等于条件成立的核心问题表达准确",
+        "recorded_at": "2026-07-19T04:54:37Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_17",
+      "number": 17,
+      "title": "先画共享状态和不变量",
+      "job": "prompts/slide_17.json",
+      "out": "origin_image/slide_17.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_17",
+        "agent_nickname": "slide_17",
+        "prompt": "prompts/slide_17.json",
+        "prompt_sha256": "b0818375c18f4209c8b578d6b62b73d88651e3d7a8b2e3c87807fc4d4a1d6755",
+        "dispatched_at": "2026-07-19T04:56:18Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_17",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78ba-1513-7c23-81d8-7b659bf0f2e7\\exec-b8fc088c-e4bc-43fc-b5f8-51dc5e4a7b41.png",
+        "selected_source_sha256": "1699e1e7c40c0e8d61b146f3de1e84e6062b013ef0222346ff92b32fc391dd66",
+        "final_image": "origin_image/slide_17.png",
+        "final_image_sha256": "1699e1e7c40c0e8d61b146f3de1e84e6062b013ef0222346ff92b32fc391dd66",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "共享状态与 mutex 边界准确",
+        "recorded_at": "2026-07-19T05:01:31Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_18",
+      "number": 18,
+      "title": "wait 的原子解锁与睡眠",
+      "job": "prompts/slide_18.json",
+      "out": "origin_image/slide_18.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_18",
+        "agent_nickname": "slide_18",
+        "prompt": "prompts/slide_18.json",
+        "prompt_sha256": "594064c0054bbf4854a97eb5f2b7abf20e9ea3cfeba6dcbf498246be3de1e85a",
+        "dispatched_at": "2026-07-19T04:56:18Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_18",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78ba-52b9-70a2-a900-71aca7d9f769\\exec-1ae41165-8707-45c8-a7a9-c81094a9c8f4.png",
+        "selected_source_sha256": "0bbc7b2f6f569947b4062089b403649499a8ec61da0c085e39bea6e881fbd097",
+        "final_image": "origin_image/slide_18.png",
+        "final_image_sha256": "0bbc7b2f6f569947b4062089b403649499a8ec61da0c085e39bea6e881fbd097",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "wait 原子解锁睡眠及重锁准确",
+        "recorded_at": "2026-07-19T05:01:31Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_19",
+      "number": 19,
+      "title": "丢失通知与虚假唤醒",
+      "job": "prompts/slide_19.json",
+      "out": "origin_image/slide_19.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_19",
+        "agent_nickname": "slide_19",
+        "prompt": "prompts/slide_19.json",
+        "prompt_sha256": "872cea972e76684d02513df644fef1eb4f03a7d3846888c45936cd3f8c309364",
+        "dispatched_at": "2026-07-19T04:56:19Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_19",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78bb-23b6-72f2-bac1-c8212ff79283\\exec-a1b613b5-cf5b-4428-9eb9-c0daa72e7173.png",
+        "selected_source_sha256": "b57cadba40d2e405e56b58d999427bf43a502becea5daf3c95110ccf4fbe1f9e",
+        "final_image": "origin_image/slide_19.png",
+        "final_image_sha256": "b57cadba40d2e405e56b58d999427bf43a502becea5daf3c95110ccf4fbe1f9e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "丢失通知与虚假唤醒对比准确",
+        "recorded_at": "2026-07-19T05:01:32Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_20",
+      "number": 20,
+      "title": "release/acquire 发布数据",
+      "job": "prompts/slide_20.json",
+      "out": "origin_image/slide_20.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_20",
+        "agent_nickname": "slide_20",
+        "prompt": "prompts/slide_20.json",
+        "prompt_sha256": "1290213c5754090909db54488b9821d46a8542dc987804f5d9bb7119805f4077",
+        "dispatched_at": "2026-07-19T05:03:09Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_20",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78c0-771d-7832-8f36-87e0194ac999\\exec-6c8e98b0-f60b-48af-8a8d-dd051b54487f.png",
+        "selected_source_sha256": "491e6f34692195282573bca75faf46aeb5daf75c8ec92ebfc321d747b0838e32",
+        "final_image": "origin_image/slide_20.png",
+        "final_image_sha256": "491e6f34692195282573bca75faf46aeb5daf75c8ec92ebfc321d747b0838e32",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "release acquire 发布数据链准确",
+        "recorded_at": "2026-07-19T05:11:48Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_21",
+      "number": 21,
+      "title": "relaxed、acquire/release、seq_cst 怎么选",
+      "job": "prompts/slide_21.json",
+      "out": "origin_image/slide_21.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_21",
+        "agent_nickname": "slide_21",
+        "prompt": "prompts/slide_21.json",
+        "prompt_sha256": "536ed082c739a666d6b73bfd3e5beefc3b72e0a1b3c56bb785d5e7605ce5a2cf",
+        "dispatched_at": "2026-07-19T05:03:09Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_21",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78c0-bb3c-79c0-930a-93da78b8f486\\exec-081fb341-6ca2-4aba-b502-08be7f14d115.png",
+        "selected_source_sha256": "d6aacbd41beadf07eb6ad573c87072c297b5a978e28a1465253d41a442560239",
+        "final_image": "origin_image/slide_21.png",
+        "final_image_sha256": "d6aacbd41beadf07eb6ad573c87072c297b5a978e28a1465253d41a442560239",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "三种内存序用途对比清晰",
+        "recorded_at": "2026-07-19T05:11:49Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_22",
+      "number": 22,
+      "title": "线程池停止协议",
+      "job": "prompts/slide_22.json",
+      "out": "origin_image/slide_22.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_22",
+        "agent_nickname": "slide_22",
+        "prompt": "prompts/slide_22.json",
+        "prompt_sha256": "7543ef9c56033227efe5257744a045e1c632b68d04d43b89ce31937f314aaf70",
+        "dispatched_at": "2026-07-19T05:03:10Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_22",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78c1-37fe-7cc3-b8b1-0cf80692435f\\exec-f2ba9628-d2a1-472b-b3e1-6be2bef5ff6d.png",
+        "selected_source_sha256": "5cbc67c43df088099aa0400f40c6ff14f820f4a0e6d4ff073c0b79da97cb4714",
+        "final_image": "origin_image/slide_22.png",
+        "final_image_sha256": "5cbc67c43df088099aa0400f40c6ff14f820f4a0e6d4ff073c0b79da97cb4714",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "线程池停止 join 销毁顺序准确",
+        "recorded_at": "2026-07-19T05:11:49Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_23",
+      "number": 23,
+      "title": "总结——并发正确性的六个问题",
+      "job": "prompts/slide_23.json",
+      "out": "origin_image/slide_23.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_23",
+        "agent_nickname": "slide_23",
+        "prompt": "prompts/slide_23.json",
+        "prompt_sha256": "2f32de4329f356299431342e33e662fa5c4fe457c47a12c1dd3535191a42b0a2",
+        "dispatched_at": "2026-07-19T05:13:15Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_23",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78c9-f6b8-7912-bef7-640b5f537ef0\\exec-f40a9276-f89a-4842-b3af-9a74954e9734.png",
+        "selected_source_sha256": "721efcd62879a708de2f80d58973824c62fb7efc2d911a3043745ba4677e811f",
+        "final_image": "origin_image/slide_23.png",
+        "final_image_sha256": "721efcd62879a708de2f80d58973824c62fb7efc2d911a3043745ba4677e811f",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "并发正确性六问总结准确",
+        "recorded_at": "2026-07-19T05:19:24Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_24",
+      "number": 24,
+      "title": "封面——puts 的真实地址编译时并不知道",
+      "job": "prompts/slide_24.json",
+      "out": "origin_image/slide_24.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_24",
+        "agent_nickname": "slide_24",
+        "prompt": "prompts/slide_24.json",
+        "prompt_sha256": "443338dd5ef64a8a03779cdd797b183af998d72018c2945e50fd9e874fa7673c",
+        "dispatched_at": "2026-07-19T05:13:16Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_24",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78ca-4161-7822-aa9c-ef8e458122f1\\exec-70fa030b-9aa9-4a4a-a234-69526a872802.png",
+        "selected_source_sha256": "31535a962186ddd99923499f959c1f75e545f09aaf6ef620b3bb15040dcc1440",
+        "final_image": "origin_image/slide_24.png",
+        "final_image_sha256": "31535a962186ddd99923499f959c1f75e545f09aaf6ef620b3bb15040dcc1440",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "动态符号运行时绑定问题准确",
+        "recorded_at": "2026-07-19T05:19:25Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_25",
+      "number": 25,
+      "title": "源文件到 ELF",
+      "job": "prompts/slide_25.json",
+      "out": "origin_image/slide_25.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_25",
+        "agent_nickname": "slide_25",
+        "prompt": "prompts/slide_25.json",
+        "prompt_sha256": "3a86ad04f34205c50f04b685a9df36964ccb1395d7a55428e7567e40654d2178",
+        "dispatched_at": "2026-07-19T05:13:16Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_25",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78ca-8db5-7aa0-866b-664870fc7271\\exec-9bf8d453-91b4-42ca-9317-ac2b0b35ca85.png",
+        "selected_source_sha256": "47a7a9b68fa674f8b188e3bba643bbf4922e67ae30870b42ff1f009c024a48b5",
+        "final_image": "origin_image/slide_25.png",
+        "final_image_sha256": "47a7a9b68fa674f8b188e3bba643bbf4922e67ae30870b42ff1f009c024a48b5",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "源文件到 ELF 构建链准确",
+        "recorded_at": "2026-07-19T05:19:25Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_26",
+      "number": 26,
+      "title": "section 与 segment",
+      "job": "prompts/slide_26.json",
+      "out": "origin_image/slide_26.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_26",
+        "agent_nickname": "slide_26",
+        "prompt": "prompts/slide_26.json",
+        "prompt_sha256": "0b7a25563f885ee376bbdeb1d11031eb4ea78834666e71cd934871549d5049e5",
+        "dispatched_at": "2026-07-19T05:21:27Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_26",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78d1-0f55-78c0-b465-39e5507e6931\\exec-f55aadbc-a98a-4e31-8eb2-c5eeaaeffdb2.png",
+        "selected_source_sha256": "855382140f520e77e010f902824cd5c4cdc866bda7e95904ea5b10512df617be",
+        "final_image": "origin_image/slide_26.png",
+        "final_image_sha256": "855382140f520e77e010f902824cd5c4cdc866bda7e95904ea5b10512df617be",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "section 与 segment 视角权限映射准确",
+        "recorded_at": "2026-07-19T05:29:38Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_27",
+      "number": 27,
+      "title": "execve 到 main",
+      "job": "prompts/slide_27.json",
+      "out": "origin_image/slide_27.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_27",
+        "agent_nickname": "slide_27",
+        "prompt": "prompts/slide_27.json",
+        "prompt_sha256": "33bfad009770070bdaac454f9d5b7c6ad089dc88b7c211b0fd4511a560cec28f",
+        "dispatched_at": "2026-07-19T05:21:28Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_27",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78d1-9c57-7941-8b80-9d810376f421\\exec-d53ed523-ce66-42b1-961e-7c34a8ba3d64.png",
+        "selected_source_sha256": "507671cbf2332f2dd3d0ba046fa4951a41e61efdf7ade1a26c142d7a5642d707",
+        "final_image": "origin_image/slide_27.png",
+        "final_image_sha256": "507671cbf2332f2dd3d0ba046fa4951a41e61efdf7ade1a26c142d7a5642d707",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "execve 到 main 装载链准确",
+        "recorded_at": "2026-07-19T05:29:39Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_28",
+      "number": 28,
+      "title": "第一次 puts@plt 调用",
+      "job": "prompts/slide_28.json",
+      "out": "origin_image/slide_28.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_28",
+        "agent_nickname": "slide_28",
+        "prompt": "prompts/slide_28.json",
+        "prompt_sha256": "190f7be9c62ecb4652518c125a2d942d6989e7e1c1594fb4c7fdf5d15194a1d4",
+        "dispatched_at": "2026-07-19T05:21:28Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_28",
+        "backend_used": "built-in image tool",
+        "selected_source": "C:\\Users\\15255\\.codex\\generated_images\\019f78d1-e64a-70e3-aae1-ba6d2e96e31d\\exec-e8d5b835-972e-404b-8db6-671b1e5ca1e7.png",
+        "selected_source_sha256": "7c068046abb87cd225832d892ad3322b2b3fe011244d217ad53e2f10a126fb7c",
+        "final_image": "origin_image/slide_28.png",
+        "final_image_sha256": "7c068046abb87cd225832d892ad3322b2b3fe011244d217ad53e2f10a126fb7c",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "首次 PLT 延迟绑定和 GOT 写回准确",
+        "recorded_at": "2026-07-19T05:29:39Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_29",
+      "number": 29,
+      "title": "后续调用与安全选项",
+      "job": "prompts/slide_29.json",
+      "out": "origin_image/slide_29.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_29",
+        "agent_nickname": "slide_29",
+        "prompt": "prompts/slide_29.json",
+        "prompt_sha256": "22736cdc3bf05beeabc71cd695e0a8d0647055de7c8887a5a76af418021826d4",
+        "dispatched_at": "2026-07-19T05:33:35Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_29",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_29.png",
+        "selected_source_sha256": "1385c260313540ab56637316682f915fda3f0852381cc2cabdc2ca468b8b5171",
+        "final_image": "origin_image/slide_29.png",
+        "final_image_sha256": "1385c260313540ab56637316682f915fda3f0852381cc2cabdc2ca468b8b5171",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，技术关系和文字准确",
+        "recorded_at": "2026-07-19T05:40:51Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_30",
+      "number": 30,
+      "title": "用命令验证每一步",
+      "job": "prompts/slide_30.json",
+      "out": "origin_image/slide_30.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_30",
+        "agent_nickname": "slide_30",
+        "prompt": "prompts/slide_30.json",
+        "prompt_sha256": "fd62c4d193a74eb57a3c466c812de27e01ad090d2559487a963807c6cbd3e6b1",
+        "dispatched_at": "2026-07-19T05:33:36Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_30",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_30.png",
+        "selected_source_sha256": "114a89ff737c183f05b190e8fa353796f1b2b9a255aaa78a399bf9c4c87138e7",
+        "final_image": "origin_image/slide_30.png",
+        "final_image_sha256": "114a89ff737c183f05b190e8fa353796f1b2b9a255aaa78a399bf9c4c87138e7",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，技术关系和文字准确",
+        "recorded_at": "2026-07-19T05:40:52Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_31",
+      "number": 31,
+      "title": "封面——epoll 返回的不是业务数据",
+      "job": "prompts/slide_31.json",
+      "out": "origin_image/slide_31.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_31",
+        "agent_nickname": "slide_31",
+        "prompt": "prompts/slide_31.json",
+        "prompt_sha256": "1835b47fcc20593c4fd059af8c32b11031650fe09a5d5eb51333b889ac6ac839",
+        "dispatched_at": "2026-07-19T05:33:36Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_31",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_31.png",
+        "selected_source_sha256": "6ea6d185c34e83c104d4876a797f30635927b7ba0d42423a302d2ab539017d1e",
+        "final_image": "origin_image/slide_31.png",
+        "final_image_sha256": "6ea6d185c34e83c104d4876a797f30635927b7ba0d42423a302d2ab539017d1e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，技术关系和文字准确",
+        "recorded_at": "2026-07-19T05:40:52Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_32",
+      "number": 32,
+      "title": "网卡到 socket 接收队列",
+      "job": "prompts/slide_32.json",
+      "out": "origin_image/slide_32.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_32",
+        "agent_nickname": "slide_32",
+        "prompt": "prompts/slide_32.json",
+        "prompt_sha256": "053706a9ccf02d6895ecca33369fedaf66c7ce58158465d33073b64a47269fcc",
+        "dispatched_at": "2026-07-19T05:49:55Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_32",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_32.png",
+        "selected_source_sha256": "0f9187b02f936be5e39edbc70b4de9979d645af505dadf0bd56e1711985daf27",
+        "final_image": "origin_image/slide_32.png",
+        "final_image_sha256": "0f9187b02f936be5e39edbc70b4de9979d645af505dadf0bd56e1711985daf27",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，数据流技术关系准确",
+        "recorded_at": "2026-07-19T05:53:06Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_33",
+      "number": 33,
+      "title": "epoll_wait 到连接对象",
+      "job": "prompts/slide_33.json",
+      "out": "origin_image/slide_33.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_33",
+        "agent_nickname": "slide_33",
+        "prompt": "prompts/slide_33.json",
+        "prompt_sha256": "3c9108372e18f70af684d6d9a3653232c5ab71e27b1f640b0acc5d5191dabcc2",
+        "dispatched_at": "2026-07-19T05:49:55Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_33",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_33.png",
+        "selected_source_sha256": "6dd546296eca742ebc849b3bd646befa04c9031b2835d353dc45d480b7bacb6e",
+        "final_image": "origin_image/slide_33.png",
+        "final_image_sha256": "6dd546296eca742ebc849b3bd646befa04c9031b2835d353dc45d480b7bacb6e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，数据流技术关系准确",
+        "recorded_at": "2026-07-19T05:53:06Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_34",
+      "number": 34,
+      "title": "ET 模式为什么必须读到 EAGAIN",
+      "job": "prompts/slide_34.json",
+      "out": "origin_image/slide_34.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_34",
+        "agent_nickname": "slide_34",
+        "prompt": "prompts/slide_34.json",
+        "prompt_sha256": "267f83af86a409c76dd31b30c17e7027188186e114ccf8b9370bb39aa5012f47",
+        "dispatched_at": "2026-07-19T05:49:56Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_34",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_34.png",
+        "selected_source_sha256": "466b398e8389e625d444d3186e5a8b0098536646f2be18b9a2fd28f4aa0ce3a0",
+        "final_image": "origin_image/slide_34.png",
+        "final_image_sha256": "466b398e8389e625d444d3186e5a8b0098536646f2be18b9a2fd28f4aa0ce3a0",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，数据流技术关系准确",
+        "recorded_at": "2026-07-19T05:53:07Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_35",
+      "number": 35,
+      "title": "TCP 字节流到完整消息",
+      "job": "prompts/slide_35.json",
+      "out": "origin_image/slide_35.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_35",
+        "agent_nickname": "slide_35",
+        "prompt": "prompts/slide_35.json",
+        "prompt_sha256": "bc08b6d9f692ec4b2539e0e55af011b5425a3bd5e2bd90f4afa646c12842c1e0",
+        "dispatched_at": "2026-07-19T05:56:18Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_35",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_35.png",
+        "selected_source_sha256": "ce6dcb7dcf68a74e6156950fa9e6ac89e187aaf22d6515b446d732684f5ba33f",
+        "final_image": "origin_image/slide_35.png",
+        "final_image_sha256": "ce6dcb7dcf68a74e6156950fa9e6ac89e187aaf22d6515b446d732684f5ba33f",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，协议边界背压和关闭生命周期准确",
+        "recorded_at": "2026-07-19T06:05:51Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_36",
+      "number": 36,
+      "title": "发送缓冲与背压",
+      "job": "prompts/slide_36.json",
+      "out": "origin_image/slide_36.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_36",
+        "agent_nickname": "slide_36",
+        "prompt": "prompts/slide_36.json",
+        "prompt_sha256": "6a9ab445f73a818e0d5be9c6485130f2a851f92a5fdaf7f3cf0e8b6337659e6a",
+        "dispatched_at": "2026-07-19T05:56:18Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_36",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_36.png",
+        "selected_source_sha256": "71866598fa399c25c8410cb1d4597a1c6bd6d1507628ee991d0715a46865f7d5",
+        "final_image": "origin_image/slide_36.png",
+        "final_image_sha256": "71866598fa399c25c8410cb1d4597a1c6bd6d1507628ee991d0715a46865f7d5",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，协议边界背压和关闭生命周期准确",
+        "recorded_at": "2026-07-19T06:05:51Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_37",
+      "number": 37,
+      "title": "关闭路径与资源生命周期",
+      "job": "prompts/slide_37.json",
+      "out": "origin_image/slide_37.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "recorded",
+      "dispatch": {
+        "agent_id": "/root/slide_37",
+        "agent_nickname": "slide_37",
+        "prompt": "prompts/slide_37.json",
+        "prompt_sha256": "5fc39b19d68041b33eea82bd83574dab53cdcf919e1d7380633b3f77b9771323",
+        "dispatched_at": "2026-07-19T05:56:19Z"
+      },
+      "result": {
+        "agent_id": "/root/slide_37",
+        "backend_used": "built-in image tool",
+        "selected_source": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_37.png",
+        "selected_source_sha256": "be84d81083f13fa2b62d4ca9666c9bb3cf7aff3185dc506dad3c39fa856b961e",
+        "final_image": "origin_image/slide_37.png",
+        "final_image_sha256": "be84d81083f13fa2b62d4ca9666c9bb3cf7aff3185dc506dad3c39fa856b961e",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "逐张目视检查通过，协议边界背压和关闭生命周期准确",
+        "recorded_at": "2026-07-19T06:05:52Z"
+      },
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_38",
+      "number": 38,
+      "title": "从变慢或崩溃回到证据",
+      "job": "prompts/slide_38.json",
+      "out": "origin_image/slide_38.png",
+      "input_images": [
+        {
+          "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "dispatched",
+      "dispatch": {
+        "agent_id": "/root/slide_38",
+        "agent_nickname": "slide_38",
+        "prompt": "prompts/slide_38.json",
+        "prompt_sha256": "89a24a4ac1aad520a4e86a26ccc80945d0cb4e513bc756891b6a6297bc655416",
+        "dispatched_at": "2026-07-19T06:09:19Z"
+      },
+      "result": null,
+      "blocker": null
+    }
+  ],
+  "updated_at": "2026-07-19T06:09:19Z"
+}

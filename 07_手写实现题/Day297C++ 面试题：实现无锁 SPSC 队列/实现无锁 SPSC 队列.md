@@ -68,7 +68,7 @@ private:
     std::array<std::optional<T>, Capacity> buffer_{};
     alignas(64) std::atomic<size_t> head_{0}; // 主要由消费者写
     alignas(64) std::atomic<size_t> tail_{0}; // 主要由生产者写
-};
+};            若59
 ```
 
 ---

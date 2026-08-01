@@ -6,6 +6,9 @@
 
 1. Day276：GDB 的使用
 2. Day277：gdbserver 远程调试
+3. Day319：core dump 如何还原崩溃现场
+4. Day320：ASan、UBSan 和 TSan 怎么选
+5. Day321：Linux 调试工具如何选择
 
 ## 2. 推荐整理顺序
 

@@ -329,6 +329,15 @@ vector -> list -> deque -> map/unordered_map -> set/unordered_set -> priority_qu
 12. Day295：实现对象池
 13. Day298：实现跳表
 14. Day300：手写 `std::function`
+15. Day302：实现简化版 `malloc/free`
+16. Day303：`operator new/delete` 与 placement new
+17. Day304：实现简化版 allocator
+18. Day305：实现简化版 `deque`
+19. Day306：实现红黑树和简化版 `map`
+20. Day307：实现 `stack` 和 `queue`
+21. Day308：实现简化版 `optional`
+22. Day309：实现简化版 `any`
+23. Day326：实现简化版 `variant`
 
 重点：
 
@@ -355,6 +364,13 @@ vector -> list -> deque -> map/unordered_map -> set/unordered_set -> priority_qu
 8. Day105：判断链表相交
 9. Day106：实现 TopK 问题
 10. Day294：实现 `strstr` 和 KMP
+11. Day322：实现二叉树遍历
+12. Day323：实现二叉搜索树
+13. Day324：实现 Trie 字典树
+14. Day325：实现 LFU Cache
+15. Day327：实现并查集
+16. Day328：实现图的 BFS 和 DFS
+17. Day329：实现 Bitmap
 
 重点：
 
@@ -363,6 +379,9 @@ vector -> list -> deque -> map/unordered_map -> set/unordered_set -> priority_qu
 3. 复杂度分析
 4. 数据结构选择
 5. 代码可读性
+6. 树和图的访问状态
+7. 复合数据结构的一致性
+8. 位运算和空间压缩
 
 ### 8.4 并发实现
 
@@ -405,7 +424,7 @@ vector -> list -> deque -> map/unordered_map -> set/unordered_set -> priority_qu
 
 推荐复习顺序：
 
-字符串和内存函数 -> 链表与排序 -> 容器和资源管理 -> 阻塞并发组件 -> 原子与无锁队列 -> 定时器 -> Reactor
+字符串和内存函数 -> 链表与排序 -> 树和图 -> 缓存与复合数据结构 -> 容器和资源管理 -> 阻塞并发组件 -> 原子与无锁队列 -> 定时器 -> Reactor
 
 ---
 

@@ -1,0 +1,42 @@
+{
+  "slide": 36,
+  "title": "发送缓冲与背压",
+  "prompt": "# Codex PPT Slide Image Prompt\n\n## Canvas\n{\n  \"type\": \"16:9 full-slide PowerPoint image\",\n  \"language\": \"Chinese\",\n  \"slide_number\": 36,\n  \"render_slide_number\": false\n}\n\n## Deck Goal\n把 C++ 与 Linux 中依赖时间、地址和状态变化的难点讲成可跟随的数据流动画视频。\n\n## Required Background\n{\n  \"deck_context\": {\n    \"source_summary\": \"五个短视频依次解释内存与对象生命周期、虚函数动态绑定、条件变量与内存序、ELF 动态链接、epoll Reactor 数据流。\",\n    \"core_claim\": \"复杂技术概念只有沿数据流、控制流、对象生命周期和失败路径展开，才真正容易理解。\",\n    \"canonical_terms\": [\n      \"原始存储\",\n      \"对象生命周期\",\n      \"vptr/vtable\",\n      \"happens-before\",\n      \"PLT/GOT\",\n      \"epoll 就绪\"\n    ]\n  },\n  \"slide_local_context\": {\n    \"required_background\": \"所属视频：视频 05：epoll Reactor——一个网络包如何变成业务回调。本镜头必须独立表达这些事实：send 只提交当前可接受的数据。；EAGAIN 后保留剩余数据并关注可写事件。；高水位触发暂停读取、限流或断开连接。\"\n  }\n}\n\n## Global Style\n{\n  \"name\": \"手绘技术解释风\",\n  \"visual_direction\": \"clean Chinese hand-drawn technical explainer, near-white paper background, thin sketch lines, light pencil hatching, small precise diagram, restrained pastel markers, lots of whitespace, calm educational tone\",\n  \"color_palette\": \"near-white #FCFBF7, graphite #2F3437, pale blue #BFD7F1, sage #CFE2D1, peach #F4C7B8, lavender #D8C7EF\",\n  \"typography\": \"简短准确的中文手写标题和稀疏标签，标题中等偏大，禁止长段正文\",\n  \"texture_and_finish\": \"干净纸张、轻微铅笔排线、柔和 marker 强调\"\n}\n\n## Input Images\n\n- Image 1: G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png — approved sample slide style reference; match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content\n\n\n## Slide\n{\n  \"number\": 36,\n  \"title\": \"发送缓冲与背压\",\n  \"role\": \"反馈回路\",\n  \"intent\": \"在《视频 05：epoll Reactor——一个网络包如何变成业务回调》中解释：发送缓冲与背压\"\n}\n\n## Text\n{\n  \"title\": \"发送缓冲与背压\",\n  \"key_points\": [\n    \"send 只提交当前可接受的数据。\",\n    \"EAGAIN 后保留剩余数据并关注可写事件。\",\n    \"高水位触发暂停读取、限流或断开连接。\"\n  ],\n  \"speaker_focus\": null\n}\n\n## Layout\n{\n  \"composition\": \"发送缓冲、高水位和暂停读取构成闭环箭头\",\n  \"relationship_to_previous_slide\": \"同一视觉身份下使用新的语义布局，不照搬上一页构图\"\n}\n\n## Visual Elements\n{\n  \"main_visual\": \"围绕“发送缓冲与背压”绘制一个小而精确的技术解释图\",\n  \"supporting_elements\": \"细手绘箭头、稀疏中文标签、浅色 marker 强调，不使用数字 UI 卡片\"\n}\n\n## Constraints\n[\n  \"只呈现标题和必要短标签，不把 key points 整段抄到画面\",\n  \"中文必须准确清晰，禁止乱码和伪字\",\n  \"画面保持大量留白，核心图小而精确\",\n  \"无页码、无水印、无 logo、无全页边框\",\n  \"必须是横向 16:9 全画布\"\n]\n\n## Style Reference Rule\nUse Image 1 as the approved sample-slide style reference. Match its palette, typography mood, density, texture, and overall visual identity. Do not copy its exact layout unless this slide's layout explicitly asks for it.\n\n## Input Image Handling Rules\nFor any input image marked as a strict input asset, include it visibly and preserve its content. Do not redraw, replace, relabel, or invent a similar figure. Scale and crop only as needed for composition while keeping the important labels, arrows, data, and relationships recognizable.\n\n## Universal Constraints\n- The final image itself must contain the title and key points.\n- Render Chinese text exactly and legibly; avoid garbled characters.\n- Keep the confirmed deck style consistent while varying layout by slide role.\n- No watermark, unrelated logo, or extra slide number.\n",
+  "out": "slide_36.png",
+  "input_images": [
+    {
+      "path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+      "role": "approved sample slide style reference",
+      "fidelity": "match palette, line quality, typography mood, whitespace and calm educational tone only; do not copy layout or memory-block content"
+    }
+  ],
+  "requires_context_images": true,
+  "expected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "自决策通过的内存块分割与合并样片提示词",
+    "size": "16:9 landscape, built-in generated 1672x941",
+    "quality": "built-in default high quality",
+    "approved_sample_path": "G:\\Desktop\\小红书\\C++\\视频讲解\\C++难点动态图解系列\\origin_image\\slide_04.png",
+    "input_context_preparation": "parent inspected approved sample with view_image; workers use it as style-only reference",
+    "handoff_rule": "Subagents must use this same built-in image tool in generate mode; return a blocker if unavailable."
+  },
+  "generation_contract": {
+    "must_use_selected_image_backend": true,
+    "must_match_sample_generation_method": true,
+    "forbidden_final_image_methods": [
+      "local drawing/rendering scripts",
+      "Pillow-generated slides",
+      "SVG/HTML/CSS/canvas screenshots",
+      "python-pptx/PptxGenJS/native PPT layout screenshots",
+      "manually composited text/image overlays"
+    ],
+    "must_return": [
+      "backend_used",
+      "selected_source",
+      "qa_note"
+    ]
+  }
+}
