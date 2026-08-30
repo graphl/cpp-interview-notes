@@ -12,6 +12,7 @@
 6. Day287：top、pidstat、vmstat 怎么分析性能
 7. Day288：iostat 和 sar 怎么分析 IO 和历史性能
 8. Day289：strace 和 lsof 怎么排查性能问题
+9. [vmstat 使用指南](vmstat使用指南/README.md)
 
 ## 2. 推荐整理顺序
 

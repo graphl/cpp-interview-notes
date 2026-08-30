@@ -31,3 +31,5 @@
 -> optional -> variant -> any -> string_view
 -> filesystem -> 调用工具 -> 并发与性能工具
 ```
+
+验证示例：`g++ -std=c++17 demo.cpp`

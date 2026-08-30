@@ -24,10 +24,13 @@ SPSC 中只有一个生产者修改尾位置、一个消费者修改头位置，
 
 template <typename T, std::size_t Capacity>
 class BoundedMPMCQueue {
+    // 使用 position & (Capacity - 1) 代替取模，因此容量必须为 2 的幂。
     static_assert(Capacity >= 2,
                   "capacity must be at least 2");
     static_assert((Capacity & (Capacity - 1)) == 0,
                   "capacity must be a power of two");
+
+    // 线程抢到槽位后不能再通过回滚把票号还回去，所以对象操作不能抛异常。
     static_assert(std::is_nothrow_move_constructible<T>::value,
                   "T must be nothrow move constructible");
     static_assert(std::is_nothrow_move_assignable<T>::value,
@@ -36,7 +39,13 @@ class BoundedMPMCQueue {
                   "T must be nothrow destructible");
 
     struct Cell {
+        // 槽位序号同时表示：
+        // 1. 该槽位属于环形数组的第几轮；
+        // 2. 当前是可写、可读，还是仍被另一侧占用。
         std::atomic<std::size_t> sequence;
+
+        // 只预留 T 所需的大小和对齐，不自动构造 T。
+        // 生产者抢到槽位后 placement new，消费者读取后手动析构。
         typename std::aligned_storage<
             sizeof(T), alignof(T)>::type storage;
     };
@@ -44,17 +53,21 @@ class BoundedMPMCQueue {
 public:
     BoundedMPMCQueue() noexcept {
         for (std::size_t i = 0; i < Capacity; ++i) {
+            // 初始逻辑位置 i 对应的槽位可由生产者写入。
+            // relaxed 足够：构造完成后队列还没有发布给其他线程。
             cells_[i].sequence.store(
                 i, std::memory_order_relaxed);
         }
     }
 
+    // 队列包含原子状态和原始存储，不允许复制。
     BoundedMPMCQueue(const BoundedMPMCQueue&) = delete;
     BoundedMPMCQueue& operator=(
         const BoundedMPMCQueue&) = delete;
 
     ~BoundedMPMCQueue() {
         // 教学版要求销毁前停止所有线程并排空队列。
+        // 两个位置相等只用于检查调用约定；析构本身不负责并发清理。
         assert(enqueue_position_.load(
                    std::memory_order_relaxed) ==
                dequeue_position_.load(
@@ -62,86 +75,132 @@ public:
     }
 
     bool try_enqueue(T value) noexcept {
+        // 最终由 CAS 成功的线程独占该 cell。
         Cell* cell = nullptr;
+
+        // enqueue_position_ 是生产者的全局“取票号”位置。
         std::size_t position =
             enqueue_position_.load(std::memory_order_relaxed);
 
         for (;;) {
+            // Capacity 为 2 的幂时，按位与等价于 position % Capacity。
             cell = &cells_[position & mask_];
+
+            // acquire 与消费者释放槽位时的 release 配对：
+            // 看到可写序号后，才能安全地在 storage 中构造下一轮对象。
             const std::size_t sequence =
                 cell->sequence.load(std::memory_order_acquire);
+
+            // 对生产者而言：
+            // difference == 0：该槽位正好属于当前 position，可以竞争。
+            // difference < 0：槽位仍停留在旧状态，消费者尚未释放。
+            // difference > 0：其他生产者已推进位置，应刷新票号重试。
             const std::intptr_t difference =
                 static_cast<std::intptr_t>(sequence) -
                 static_cast<std::intptr_t>(position);
 
             if (difference == 0) {
+                // 抢占 [position, position + 1) 这张生产票。
+                // compare_exchange_weak 允许伪失败，因此放在循环中使用。
+                // 失败时，position 会被自动改写为当前真实值，直接用于下轮重试。
                 if (enqueue_position_.compare_exchange_weak(
                         position, position + 1,
+                        // 全局位置只负责分配唯一票号，不负责发布 T。
                         std::memory_order_relaxed,
                         std::memory_order_relaxed)) {
                     break;
                 }
             } else if (difference < 0) {
+                // 当前逻辑位置对应的槽位仍未被消费者归还，队列已满。
                 return false;
             } else {
+                // 当前 position 已过期，重新读取最新生产位置。
                 position = enqueue_position_.load(
                     std::memory_order_relaxed);
             }
         }
 
+        // 此时当前线程独占 cell，在原始存储上构造 T。
         new (&cell->storage) T(std::move(value));
+
+        // position + 1 表示对象已经构造完成，可由对应消费者读取。
+        // release 保证 T 的构造写入先于消费者看到这个序号。
         cell->sequence.store(
             position + 1, std::memory_order_release);
         return true;
     }
 
     bool try_dequeue(T& output) noexcept {
+        // 最终由 CAS 成功的线程独占该 cell 中的对象。
         Cell* cell = nullptr;
+
+        // dequeue_position_ 是消费者的全局“取票号”位置。
         std::size_t position =
             dequeue_position_.load(std::memory_order_relaxed);
 
         for (;;) {
             cell = &cells_[position & mask_];
+
+            // acquire 与生产者发布对象时的 release 配对：
+            // 看到可读序号后，才能读取完整构造的 T。
             const std::size_t sequence =
                 cell->sequence.load(std::memory_order_acquire);
+
+            // 生产者写完 position 对应对象后会把序号设为 position + 1，
+            // 因此消费者以 position + 1 作为期望值。
             const std::intptr_t difference =
                 static_cast<std::intptr_t>(sequence) -
                 static_cast<std::intptr_t>(position + 1);
 
             if (difference == 0) {
+                // 抢占 [position, position + 1) 这张消费票。
+                // CAS 失败时 position 同样会被更新为当前真实值。
                 if (dequeue_position_.compare_exchange_weak(
                         position, position + 1,
+                        // 消费位置只负责分票，对象可见性由 sequence 保证。
                         std::memory_order_relaxed,
                         std::memory_order_relaxed)) {
                     break;
                 }
             } else if (difference < 0) {
+                // 生产者还没有发布当前逻辑位置对应的对象，队列为空。
                 return false;
             } else {
+                // 其他消费者已推进位置，刷新消费票号后继续竞争。
                 position = dequeue_position_.load(
                     std::memory_order_relaxed);
             }
         }
 
+        // storage 中的 T 已经由生产者构造，可把原始地址解释为 T*。
         T* value = reinterpret_cast<T*>(&cell->storage);
+
+        // 把元素移交给调用方，然后显式结束槽位内对象的生命周期。
         output = std::move(*value);
         value->~T();
 
+        // position + Capacity 表示该物理槽位已交给下一轮生产者。
+        // release 保证析构完成先于下一轮生产者复用 storage。
         cell->sequence.store(
             position + Capacity, std::memory_order_release);
         return true;
     }
 
     bool position_atomics_are_lock_free() const noexcept {
+        // C++ 只保证 atomic 接口语义，不保证所有平台都用无锁指令实现。
         return enqueue_position_.is_lock_free() &&
                dequeue_position_.is_lock_free();
     }
 
 private:
+    // Capacity 为 2 的幂，因此 mask_ 可用于快速映射物理槽位。
     static constexpr std::size_t mask_ = Capacity - 1;
 
+    // 固定容量的物理槽位；逻辑 position 会不断递增并循环映射到这里。
     std::array<Cell, Capacity> cells_;
 
+    // 生产者和消费者分别竞争不同的全局位置。
+    // 分开对齐用于降低两个热点原子落入同一缓存行造成的伪共享概率。
     alignas(64) std::atomic<std::size_t>
         enqueue_position_{0};
     alignas(64) std::atomic<std::size_t>
@@ -165,6 +224,106 @@ sequence < position
 ```
 
 消费者读取完成后写入 `position + Capacity`，把槽位交给环形数组的下一轮生产者。序号同时承担“轮次”和“发布状态”的作用。
+
+### 容量为 4 的具体例子
+
+假设 `Capacity = 4`，初始状态如下：
+
+```text
+物理槽位 index       0    1    2    3
+初始 sequence        0    1    2    3
+首次生产 position    0    1    2    3
+```
+
+以物理槽位 `cell[0]` 为例，它会依次服务逻辑位置 `0`、`4`、`8` 等生产者。
+
+#### 第一轮：生产者写入位置 0
+
+```text
+position   = 0
+index      = position & (Capacity - 1) = 0
+sequence   = 0
+difference = sequence - position = 0
+```
+
+`difference == 0`，表示 `cell[0]` 正在等待位置 0 的生产者，可以写入。生产者构造对象后发布：
+
+```text
+cell[0].sequence = position + 1 = 1
+```
+
+此时 `sequence == position + 1`，表示对象已经构造完成，位置 0 的消费者可以读取。
+
+#### 消费者读取位置 0
+
+消费者期望：
+
+```text
+sequence == position + 1
+sequence == 1
+```
+
+读取并析构对象后，消费者归还槽位：
+
+```text
+cell[0].sequence = position + Capacity
+                 = 0 + 4
+                 = 4
+```
+
+`sequence == 4` 表示第一轮已经结束，`cell[0]` 可以交给逻辑位置 4 的生产者。
+
+#### 第二轮：生产者写入位置 4
+
+```text
+position   = 4
+index      = 4 & 3 = 0
+sequence   = 4
+difference = sequence - position = 0
+```
+
+生产者再次写入 `cell[0]`，完成后发布：
+
+```text
+cell[0].sequence = position + 1 = 5
+```
+
+位置 4 的消费者读取完成后再写入：
+
+```text
+cell[0].sequence = position + Capacity
+                 = 4 + 4
+                 = 8
+```
+
+因此 `cell[0]` 的完整序号变化为：
+
+```text
+sequence = 0  -> 位置 0 的生产者可写
+sequence = 1  -> 位置 0 的消费者可读
+sequence = 4  -> 位置 4 的生产者可写
+sequence = 5  -> 位置 4 的消费者可读
+sequence = 8  -> 位置 8 的生产者可写
+```
+
+再看队列已满的情况。假设四个槽位都已经写入，但消费者还没有读取：
+
+```text
+enqueue_position = 4
+
+物理槽位 index    0    1    2    3
+sequence          1    2    3    4
+```
+
+新生产者的 `position = 4`，它映射到 `cell[0]`，但该槽位仍为：
+
+```text
+sequence   = 1
+position   = 4
+difference = 1 - 4 = -3
+```
+
+`difference < 0` 表示 `cell[0]` 还停留在上一轮的“可读”状态，消费者尚未将它更新为 4，因此生产者不能覆盖旧对象，队列当前视图下已满。
 
 ## 4. 内存序
 
